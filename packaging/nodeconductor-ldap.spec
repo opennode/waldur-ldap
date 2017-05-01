@@ -1,10 +1,10 @@
 Name: nodeconductor-ldap
-Summary: LDAP plugin for NodeConductor
+Summary: LDAP plugin for Waldur
 Group: Development/Libraries
 Version: 0.1.0
 Release: 1.el7
 License: MIT
-Url: http://nodeconductor.com
+Url: https://waldur.com
 Source0: %{name}-%{version}.tar.gz
 
 Requires: nodeconductor > 0.136.1
@@ -16,7 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-setuptools
 
 %description
-NodeConductor plugin for structure units management through remote LDAP databases.
+Waldur plugin for structure units management through remote LDAP databases.
 
 %prep
 %setup -q -n %{name}-%{version}
