@@ -4,6 +4,7 @@
 *.egg
 *.egg-info
 *.pyc
+*.mo
 db.sqlite3
 
 /.idea
@@ -21,8 +22,4 @@ db.sqlite3
 
 TEST-*.xml
 
-# documentation
-docs/_build/
-
 /static_files
-
