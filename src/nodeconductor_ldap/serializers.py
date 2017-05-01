@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 from rest_framework import serializers
 
 from nodeconductor.core import serializers as core_serializers, validators as core_validators
@@ -103,3 +104,13 @@ class LDAPUserSerializer(structure_serializers.BaseResourceSerializer):
             raise serializers.ValidationError({'name': _('User with such name already exists.')})
 
         return attrs
+
+    def create(self, validated_data):
+        for object_class in settings.NODECONDUCTOR_LDAP.get('user_object_classes', []):
+            if object_class not in validated_data['attributes'].setdefault('objectclass', []):
+                validated_data['attributes']['objectclass'].append(object_class)
+
+        if validated_data.get('ssh_public_key') is not None:
+            validated_data['attributes']['ipaSshPubKey'] = validated_data['ssh_public_key'].public_key
+
+        return super(LDAPUserSerializer, self).create(validated_data)

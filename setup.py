@@ -14,7 +14,7 @@ setup(
     author='OpenNode Team',
     author_email='info@opennodecloud.com',
     url='http://nodeconductor.com',
-    description='NodeConductor plugin for permissions management of structure units through remote LDAP databases.',
+    description='NodeConductor plugin for structure units management through remote LDAP databases.',
     long_description=open('README.rst').read(),
     package_dir={'': 'src'},
     packages=find_packages('src', exclude=['*.tests', '*.tests.*', 'tests.*', 'tests']),

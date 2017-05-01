@@ -16,7 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-setuptools
 
 %description
-NodeConductor plugin for permissions management of structure units through remote LDAP databases.
+NodeConductor plugin for structure units management through remote LDAP databases.
 
 %prep
 %setup -q -n %{name}-%{version}
