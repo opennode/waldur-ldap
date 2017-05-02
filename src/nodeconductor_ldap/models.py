@@ -54,8 +54,8 @@ class LDAPUser(structure_models.NewResource):
 
     class Meta:
         unique_together = ('service_project_link', 'user')
-        verbose_name = _('LDAP User')
-        verbose_name_plural = _('LDAP User')
+        verbose_name = _('LDAP user')
+        verbose_name_plural = _('LDAP user')
 
     @classmethod
     def get_url_name(cls):

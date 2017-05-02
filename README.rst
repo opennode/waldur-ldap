@@ -1,4 +1,4 @@
-NodeConductor LDAP
-==================
+Waldur LDAP
+===========
 
-NodeConductor plugin for structure units management through remote LDAP databases.
+Waldur extension for 2-way integration of structure units details with LDAP database.
