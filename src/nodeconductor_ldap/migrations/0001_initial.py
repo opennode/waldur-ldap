@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
         ('taggit', '0002_auto_20150616_2121'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('core', '0007_user_token_lifetime'),
-        ('structure', '0049_auto_20170430_1819'),
+        ('structure', '0047_privateservicesettings_sharedservicesettings'),
     ]
 
     operations = [

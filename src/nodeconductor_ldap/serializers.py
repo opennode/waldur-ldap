@@ -15,7 +15,7 @@ class ServiceSerializer(core_serializers.ExtraFieldOptionsMixin,
                         structure_serializers.BaseServiceSerializer):
 
     backend_url = serializers.CharField(allow_null=True, write_only=True,
-                                        required=False, validators=[core_validators.LDAPURLValidator])
+                                        required=False, validators=[core_validators.BackendURLValidator])
 
     SERVICE_ACCOUNT_FIELDS = {
         'backend_url': _('LDAP URL (e.g. ldap://ipa.example.com/).'),
