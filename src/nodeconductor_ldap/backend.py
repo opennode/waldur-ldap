@@ -73,6 +73,7 @@ class LDAPBackend(ServiceBackend):
     def delete_ldap_user(self, ldap_user):
         dn = ldap_user.backend_id
         try:
+            # XXX: Change to disabling user instead
             self.client.delete_s(dn)
         except ldap.LDAPError as e:
             six.reraise(LDAPBackendError, e)
