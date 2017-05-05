@@ -1,5 +1,4 @@
-NodeConductor ldapsync
-===============================
+Waldur LDAP
+===========
 
-NodeConductor extension allowing permissions management of structure units ithrough remote LDAP databases.
-
+Waldur extension for 2-way integration of structure units details with LDAP database.
